@@ -15,6 +15,12 @@ app.get("/platform", (c) => {
   });
 });
 
+app.get('/generate',(c)=>{
+  return c.json({
+    randomNumber : Math.floor(Math.random()*100)
+  })
+})
+
 serve(
   {
     fetch: app.fetch,
